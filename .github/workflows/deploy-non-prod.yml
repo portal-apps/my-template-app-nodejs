@@ -19,8 +19,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }} 
-          aws-region: us-east-1 
+          role-to-assume: arn:aws:iam::799016888929:role/github-actions-role-dev
+          aws-region: us-east-1
 
       - name: Run AWS CLI command
         run: aws s3 ls
